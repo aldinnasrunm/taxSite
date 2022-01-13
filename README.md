@@ -1,4 +1,4 @@
-# Tugas mata ku, liah Algoritma dan Pemrograman, Kelas X 2022 oleh kelompok WahDeadline
+# Tugas mata kuliah Algoritma dan Pemrograman, Kelas X 2022 oleh kelompok WahDeadline
  
 Project ini adalah bagian dari tugas besar mata kuliah Algoritma dan Pemrograman, Teknik Informatika, Universitas Muhammadiyah Surakarta, tahun 2022.
  
