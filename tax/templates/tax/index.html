@@ -17,7 +17,7 @@
    </head>
    <body>
       <section class="flex">
-         <div class="container flex mx-auto">
+         <div class="container flex mx-auto section__main">
             <div class="heading mx-auto">
                <svg
                   class="taxicon mx-auto my-3"
@@ -173,13 +173,79 @@
                >
                <div class="heading__time mx-auto my-1">
                   <p class="mx-auto">
-                    <i class="uil uil-calender"></i>
+                     <i class="uil uil-calender"></i>
                      {{time}}
                   </p>
                </div>
             </div>
 
-            <div class="group"></div>
+            <div class="mx-auto form my-2">
+               <p class="form__title">Insert your montly income</p>
+               <form action="" method="post">
+                  {% csrf_token %}
+                  <input type="text" name="tax" class />
+                  <button type="submit"><i class="uil uil-enter"></i></button>
+               </form>
+               <p class="mx-auto form__note">No period “.” nor comma “,”</p>
+            </div>
+
+            <div class="resultTab mx-auto">
+               {% if exc%}
+                  <p class="exc"><i class="uil uil-exclamation-octagon"></i>{{exc}}</p>
+               {% endif%} 
+               
+               {% if resultTax%}
+               <p class="resultTab__title ">You just Entered <em> <strong>{{rtCur}}</strong></em></p>
+               
+                <table class="resultTab__table">
+                  <tr>
+                     <th>Taxable Income Bracket</th>
+                     <th>Tax Rate</th>
+                     <th>Your Owed Tax</th>
+                  </tr>
+                  {% for x in resultTax %}
+                    <tr class="dataTax">
+                      {% for data in x %}
+                      <td>{{data}}</td>
+                      {% endfor %}
+                    </tr>
+                  {% endfor %}
+                  <tr>
+                     <th colspan="2">Total</th>
+                     <th>{{totalTax}}</th>
+                  </tr>
+                </table>
+
+                <p class="button refresh "><a href="{% url 'home' %}" class=""> <i class="uil uil-refresh"></i>Refresh the page</a></p>
+                <p class="button goAbout "><a href="{% url 'about' %}" class=" "> <i class="uil uil-info-circle"></i>About the page</a></p>
+               
+                {% endif%}
+            </div>
+            <div class="group">
+              <div class="group__heading">
+                <p class="group__heading-title">Group</p>
+                <p class="group__heading-desc">Our beloved group member✨</p>
+              </div>
+              <div class="group__member">
+                {% for name,nim in group.items %}
+                  <p class = "group__member-data my-1"><i class="uil uil-user" ></i> <strong>{{name}}</strong><br> Student Number {{nim}}</p>
+                {% endfor %}
+              </div>
+            </div>
+
+            <div class="lecturer">
+              <div class="lecturer__heading">
+                <p class="lecturer__heading-title">Lecturer</p>
+                <p class="lecturer__heading-desc">Our beloved lecturer✨</p>
+              </div>
+              <div class="lecturer__member">
+                  <p class = "lecturer__member-data my-1"><i class="uil uil-user" ></i> <strong>{{lecturer}}</strong></p>
+              </div>
+            </div>
+            
+            <div class="footer mx-auto">
+              <p>made with 💙 2022</p>
+            </div>
          </div>
       </section>
    </body>
