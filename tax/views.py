@@ -42,4 +42,16 @@ def home(request):
 
 
 def about(request):
-    return render(request, 'tax/about.html')
+
+    agus = ["Making style and logic for about "]
+    aldin = ["Making style and logic for index "]
+    abil = ["Making logic for views"]
+    group = {
+    "Agus Ardiansyah Nh" : agus,
+    "Aldin Nasrun Minalloh" : aldin,
+    "Hanifah Afkar Nabila" : abil
+    }
+    context = {
+        "group" : group,
+    }
+    return render(request, 'tax/about.html', context)
