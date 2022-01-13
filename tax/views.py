@@ -43,9 +43,9 @@ def home(request):
 
 def about(request):
 
-    agus = ["Making style and logic for about "]
-    aldin = ["Making style and logic for index "]
-    abil = ["Making logic for views"]
+    agus = ["Membuat style and logic untuk about.html, menjelaskan project di readme.md, deploy app ke heroku"]
+    aldin = ["Membuat style and logic untuk index.html, add logic into myutils, setting urls.py"]
+    abil = ["Membuat logic untuk views, melengkapi dan mengedit readme.md, full design about page di figma"]
     group = {
     "Agus Ardiansyah Nh" : agus,
     "Aldin Nasrun Minalloh" : aldin,
