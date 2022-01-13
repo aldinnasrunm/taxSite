@@ -9,9 +9,9 @@ def home(request):
     timeFormat = showDate(now)
     #konteks nya diganti biar buat ngisi datanya
     group = {
-    "Agus Ardiansyah Nh" : "lorem ipsum",
-    "Aldin Nasrun Minalloh" : "lorem ipsum",
-    "H. Afkar Nabila" : "lorem ipsum"
+    "Agus Ardiansyah Nh" : "L200214397",
+    "Aldin Nasrun Minalloh" : "L200214208",
+    "Hanifah Afkar Nabila" : "L200214252"
     }
     context = {
         "title" : "Tugas AP 2021",
@@ -36,9 +36,22 @@ def home(request):
 
         except:
             context.update({"exc":"Please insert positive integer! "})
-        # vo = countVowels(rt)
-        # co = countConsonants(rt)    #ini kak. copas kodinganmu sek wingi wae
+
     return render(request, 'tax/index.html', context)
 
+
+
 def about(request):
-    return render(request, 'tax/about.html')
+
+    agus = ["Making style and logic for about "]
+    aldin = ["Making style and logic for index "]
+    abil = ["Making logic for views"]
+    group = {
+    "Agus Ardiansyah Nh" : agus,
+    "Aldin Nasrun Minalloh" : aldin,
+    "Hanifah Afkar Nabila" : abil
+    }
+    context = {
+        "group" : group,
+    }
+    return render(request, 'tax/about.html', context)
