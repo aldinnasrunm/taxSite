@@ -330,3 +330,34 @@ body {
   color: var(--light);
   background-color: var(--dark);
 }
+
+
+/* media queries*/
+@media only screen and (min-width: 992px) {
+
+  :root {
+
+    --light : #FAFAFF;
+    --dark :#242D62;
+    --blue: #064DFD;
+    --purblue: #316CFF;
+    --purple-light: #E5ECFF;
+    --shade: #666281;
+  
+     --text-sm : 4rem;
+     --text-base : 1rem;
+     --text-md : 1.2rem;
+     --text-lg: 1.5rem;
+     --text-xl: 2rem;
+     --text-2xl: 2.5rem;
+     --text-3xl : 3rem;
+     --text-4xl : 3.5rem;
+  
+     --font-semibold : 500;
+     --font-bold : 600;
+  
+  }
+
+
+
+}
