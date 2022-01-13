@@ -14,7 +14,356 @@
          rel="stylesheet"
          href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
       />
-      <style></style>
+
+      <style>
+         /* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+   box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol,
+ul {
+   list-style: none;
+}
+blockquote,
+q {
+   quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+   content: "";
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+/* font poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+/* root element */
+:root {
+   --light: #fafaff;
+   --dark: #242d62;
+   --blue: #064dfd;
+   --purblue: #316cff;
+   --purple-light: #e5ecff;
+   --shade: #666281;
+
+   --text-sm: 0.8rem;
+   --text-base: 1rem;
+   --text-md: 1.2rem;
+   --text-lg: 1.5rem;
+   --text-xl: 2rem;
+   --text-2xl: 2.5rem;
+   --text-3xl: 3rem;
+   --text-4xl: 3.5rem;
+
+   --font-semibold: 500;
+   --font-bold: 600;
+}
+
+body {
+   overflow-x: hidden;
+   width: 100vw;
+   background-color: var(--light);
+   color: var(--dark);
+   font-family: "Poppins";
+   font-size: 22px;
+}
+
+.container {
+   background-color: #ffffff;
+   padding: 10px;
+   width: 100vw - 20px;
+   margin: 0 auto;
+   box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.18);
+   border-radius: 18px;
+}
+
+.text-wrapper {
+   width: 95%;
+   text-align: center;
+}
+
+.wrapper {
+   width: fit-content;
+   border-radius: 8px;
+   background-color: #0c73f00f;
+}
+
+.container {
+   width: 90vw;
+   margin: 4rem auto;
+   background: #fff;
+}
+
+.flex {
+   display: flex;
+}
+
+.mx-auto {
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.my-sm {
+   margin-top: 0.5rem;
+   margin-bottom: 0.5rem;
+}
+
+.my-1 {
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+.my-2 {
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+
+.my-3 {
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+}
+
+/* Section main */
+
+.section__main {
+   flex-direction: column;
+}
+
+/* heading  */
+.heading {
+   display: flex;
+   width: 90%;
+   text-align: center;
+   flex-direction: column;
+}
+
+.heading__title {
+   font-size: var(--text-xl);
+   font-weight: var(--font-bold);
+}
+
+.heading__desc {
+   font-size: var(--text-base);
+   color: var(--shade);
+}
+
+.image img{
+  width:80%;
+}
+
+
+.contribution__member-data{
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--purblue);
+  color: var(--light);
+  border-radius: 18px;
+  font-size: var(--text-base);
+}
+
+.button {
+  width: fit-content;
+  padding: 0.8rem 1rem;
+  font-size: var(--text-md);
+  border-radius: 8px;
+}
+
+.refresh {
+  color: var(--light);
+  background-color: var(--purblue);
+  margin: 1rem auto;
+}
+
+
+.refresh a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+.contribution__title{
+  margin: 3rem 0 0 0 ;
+  font-size: var(--text-xl);
+  font-weight: bold;
+}
+
+
+.footer {
+  margin-top: 3rem;
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 18px;
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--light);
+  background-color: var(--dark);
+}
+
+
+
+/* media queries*/
+@media only screen and (min-width: 992px) {
+  :root {
+     --text-sm: 1rem;
+     --text-base: 1.5rem;
+     --text-md: 2rem;
+     --text-lg: 2.5rem;
+     --text-xl: 4rem;
+     --text-2xl: 4.5rem;
+     --text-3xl: 5.5rem;
+     --text-4xl: 6rem;
+  }
+
+  .container {
+     padding: 2rem 9rem;
+     width: 100vw - 200px;
+     margin: 4rem auto;
+  }
+
+  .heading__time {
+     font-size: var(--text-base);
+     padding: 0.5rem 1rem;
+     border-radius: 8px;
+     background-color: var(--purple-light);
+  }
+
+.resultTab table,
+th,
+td {
+   border: 1px solid var(--purblue);
+   border-collapse: collapse;
+   padding: 1rem 2.5rem;
+   font-size: var(--text-md);
+}
+
+.group__member-data {
+ padding: 0.8rem 1rem;
+ font-size: var(--text-base);
+}
+.lecturer__member-data {
+ padding: 0.8rem 1rem;
+ font-size: var(--text-base);
+}
+
+}
+
+
+@media only screen and (min-width: 1800px) {
+ .container {
+   padding: 6rem 12rem;
+   width: 100vw - 280px;
+   margin: 4rem auto;
+ }
+
+}
+      </style>
+
    </head>
    <body>
       <section class="flex">
