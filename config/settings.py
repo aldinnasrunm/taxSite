@@ -1,3 +1,4 @@
+import os
 """
 Django settings for config project.
 
@@ -117,13 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-<<<<<<< Updated upstream
-STATICFILES_DIRS = [
-    "D:/GitHub/taxSite/tax/templates/static"
-]
-=======
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'tax', 'static')]
->>>>>>> Stashed changes
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
