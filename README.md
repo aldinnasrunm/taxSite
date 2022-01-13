@@ -38,5 +38,5 @@ https://tax-2021-agus-aldin-nabila.herokuapp.com/
  
 ## Daftar kontribusi :
 1. Agus  	: Membuat style and logic untuk about.html, menjelaskan project di readme.md, deploy app ke heroku
-2. Aldin	: Membuat style and logic untuk index.html, add logic into myutils, setting urls.py
+2. Aldin	: Membuat style and logic untuk index.html, add logic into myutils, setting urls.py, Membuat desain halaman utama di figma
 3. Nabila	: Membuat logic untuk views, melengkapi dan mengedit readme.md, full design about page di figma

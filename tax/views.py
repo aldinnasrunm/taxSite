@@ -42,10 +42,9 @@ def home(request):
 
 
 def about(request):
-
-    agus = ["Membuat style and logic untuk about.html, menjelaskan project di readme.md, deploy app ke heroku"]
-    aldin = ["Membuat style and logic untuk index.html, add logic into myutils, setting urls.py"]
-    abil = ["Membuat logic untuk views, melengkapi dan mengedit readme.md, full design about page di figma"]
+    agus = ["Create style and logic for about.html", "Explain project in readme.md", "Deploy app to heroku"]
+    aldin = ["Create style and logic for index.html" , "Make logic into myutils","Setting urls.py", "Design Index page in figma"]
+    abil = ["Create logic for views", "complete and edit readme.md","full design about page in figma"]
     group = {
     "Agus Ardiansyah Nh" : agus,
     "Aldin Nasrun Minalloh" : aldin,
